@@ -1,0 +1,85 @@
+:root{
+  --navy:#0a1026; --panel:#141d3a; --panel2:#1a2650;
+  --orange:#f97316; --orange-l:#fb923c; --blue:#2f6bff; --cyan:#3ec6ff;
+  --white:#f5f7fa; --gray:#a5afc6; --line:#2c3a64;
+}
+*{box-sizing:border-box; margin:0; padding:0;}
+body{background:var(--navy); color:var(--white);
+  font-family:"Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic UI","Yu Gothic",Meiryo,sans-serif;
+  line-height:1.7;}
+a{color:inherit; text-decoration:none;}
+.serif{font-family:"Hiragino Mincho ProN","Yu Mincho",YuMincho,"MS PMincho",serif;}
+.wrap{max-width:1120px; margin:0 auto; padding:0 20px;}
+
+/* header */
+header{border-bottom:1px solid var(--line);}
+.header-in{display:flex; align-items:center; gap:14px; padding:14px 0;}
+.logo{width:44px; height:44px;}
+.brand-name{font-weight:700; font-size:20px; letter-spacing:.04em;}
+.brand-sub{font-size:12px; color:var(--gray);}
+nav{margin-left:auto; display:flex; gap:22px; font-size:15px; color:var(--gray);}
+nav a:hover{color:var(--orange-l);}
+
+/* hero */
+.hero{text-align:center; padding:64px 0 8px;}
+.hero h1{font-size:52px; letter-spacing:.06em; margin-bottom:14px;}
+.hero p{color:var(--gray); font-size:17px;}
+
+/* doors */
+.doors{display:grid; grid-template-columns:1fr 1fr; gap:22px; margin:44px 0 10px;}
+.door{background:var(--panel); border-radius:22px; padding:30px 30px 34px; border-top:6px solid var(--orange);}
+.door.blue{border-top-color:var(--blue);}
+.door h2{font-size:32px; margin-bottom:10px;}
+.door p{color:var(--gray); font-size:15px; margin-bottom:22px;}
+.btn{display:inline-block; border-radius:999px; padding:11px 26px; font-weight:700; font-size:15px; color:#fff; background:var(--orange);}
+.btn.blue{background:var(--blue);}
+.btn.ghost{background:transparent; border:1px solid var(--line); color:var(--gray); margin-left:10px;}
+.btn:hover{opacity:.88;}
+
+.strip{text-align:center; color:var(--gray); font-size:14px; margin:30px 0 8px;}
+.strip b{color:var(--orange-l); font-weight:600;}
+
+/* sections */
+section{padding:34px 0 6px;}
+h2.page-title{font-size:36px; margin:26px 0 6px;}
+.page-lead{color:var(--gray); margin-bottom:26px;}
+
+/* cards grid */
+.grid{display:grid; grid-template-columns:1fr 1fr; gap:22px; margin-bottom:20px;}
+.card{background:var(--panel); border-radius:20px; overflow:hidden;}
+.card .visual{height:110px; display:flex; align-items:center; justify-content:center; color:#e8edf7; font-size:14px; letter-spacing:.14em;}
+.v1{background:linear-gradient(120deg,#3a54a0,#5a7bd0);}
+.v2{background:linear-gradient(120deg,#603080,#9a4d8f);}
+.v3{background:linear-gradient(120deg,#26605a,#3f9a80);}
+.v4{background:linear-gradient(120deg,#78502a,#b07a3f);}
+.card .body{padding:20px 24px 24px;}
+.card h3{font-size:21px; margin-bottom:6px;}
+.card .desc{color:var(--gray); font-size:14px; margin-bottom:16px;}
+.card .row{display:flex; gap:10px; flex-wrap:wrap;}
+.card .btn{padding:8px 20px; font-size:14px;}
+.card .btn.ghost{margin-left:0;}
+
+.tool-card{background:var(--panel); border-radius:20px; padding:26px 28px; border-top:6px solid var(--orange);}
+.tool-card.blue{border-top-color:var(--blue);}
+.tool-card.cyan{border-top-color:var(--cyan);}
+.tool-card h3{font-size:24px;}
+.tool-card .role{color:var(--orange-l); font-weight:700; font-size:14px; margin:2px 0 10px;}
+.tool-card.blue .role{color:var(--cyan);}
+.tool-card .desc{color:var(--gray); font-size:14px; margin-bottom:18px;}
+
+/* detail */
+.detail{background:var(--panel); border-radius:20px; padding:26px 28px; margin-bottom:20px;}
+.detail h3{font-size:22px; margin-bottom:10px;}
+.detail ul{list-style:none; margin:0 0 14px;}
+.detail li{color:var(--gray); font-size:15px; padding-left:20px; position:relative; margin-bottom:4px;}
+.detail li::before{content:""; width:8px; height:8px; border-radius:50%; background:var(--orange); position:absolute; left:0; top:11px;}
+.note{color:var(--gray); font-size:13px;}
+
+footer{border-top:1px solid var(--line); margin-top:44px; padding:22px 0 30px; text-align:center; color:#6e7894; font-size:13px;}
+
+@media (max-width:760px){
+  .doors,.grid{grid-template-columns:1fr;}
+  .hero h1{font-size:38px;}
+  nav{gap:14px; font-size:14px;}
+  .brand-sub{display:none;}
+}
