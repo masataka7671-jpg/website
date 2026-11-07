@@ -7,6 +7,7 @@
 - `tools.html` … ツール群（StoryVerse）
 - `style.css` … デザイン共通
 - `assets/` … 画像（ロゴ）
+- `storyverse-logo.png` … ロゴ画像（予備）
 
 ## 更新のしかた
 ファイルを編集して、このリポジトリにアップロード（上書き）すれば、Cloudflare Pages が自動で公開し直します。
