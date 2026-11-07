@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DREM PLAY ― 夢芝居 × StoryVerse</title>
+<meta name="description" content="小説と動画の「夢芝居」と、制作ツール「StoryVerse」の公式ストア。AI相方アプリ「Your AI」などの制作ツールと、カクヨム連載小説の入口です。">
+<link rel="icon" href="assets/storyverse-logo.png">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#05060a; color:#eef1f8; font-family:"Hiragino Kaku Gothic ProN","Yu Gothic UI","Noto Sans CJK JP",sans-serif; }
+  a { text-decoration:none; color:inherit; }
+  .wrap { max-width:1180px; margin:0 auto; padding:0 28px; }
+  header { display:flex; align-items:center; justify-content:space-between; padding:22px 0; }
+  .logo { font-size:19px; font-weight:700; letter-spacing:.14em; }
+  .logo span { background:linear-gradient(90deg,#2f6bff,#7a4dff); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  nav { display:flex; gap:30px; font-size:14px; color:#aebadd; }
+  nav a:hover { color:#fff; }
+  .hero { position:relative; border-radius:26px; overflow:hidden; margin-top:6px; }
+  .hero img { width:100%; height:430px; object-fit:cover; display:block; }
+  .hero .shade { position:absolute; inset:0; background:linear-gradient(90deg, rgba(5,6,10,.88) 30%, rgba(5,6,10,.25) 70%); }
+  .hero .txt { position:absolute; left:52px; top:50%; transform:translateY(-50%); max-width:600px; }
+  .hero h1 { font-size:54px; font-weight:800; line-height:1.25; letter-spacing:.04em; }
+  .hero p { margin-top:18px; font-size:16px; color:#c7d2f2; line-height:1.9; }
+  .cta { display:inline-block; margin-top:28px; padding:14px 34px; border-radius:999px; background:linear-gradient(90deg,#2f6bff,#7a4dff); color:#fff; font-weight:700; font-size:15px; }
+  h2 { font-size:27px; margin:64px 0 8px; letter-spacing:.05em; }
+  .sub { color:#8fa1cc; font-size:14px; margin-bottom:26px; }
+  .grid { display:grid; grid-template-columns:repeat(2,1fr); gap:22px; }
+  .card { background:#171a26; border-radius:22px; padding:28px; }
+  .card.feature { grid-column:span 2; background:linear-gradient(120deg,#14224f,#241448); display:flex; gap:30px; align-items:center; }
+  .thumb { border-radius:16px; height:170px; display:flex; align-items:center; justify-content:center; font-size:30px; font-weight:800; letter-spacing:.06em; color:#fff; text-align:center; line-height:1.4; padding:12px; }
+  .t-yourai { background:linear-gradient(120deg,#2f6bff,#7a4dff); }
+  .t-word { background:linear-gradient(120deg,#1d7a5f,#26e6b0); }
+  .t-wv { background:linear-gradient(120deg,#31418f,#2f6bff); }
+  .t-ui { background:linear-gradient(120deg,#7a4dff,#c05df0); }
+  .t-tr { background:linear-gradient(120deg,#31418f,#7a4dff); }
+  .card h3 { font-size:21px; margin:18px 0 8px; }
+  .card.feature h3 { margin-top:0; font-size:26px; }
+  .card p { color:#aebadd; font-size:14px; line-height:1.85; }
+  .row { display:flex; align-items:center; justify-content:space-between; margin-top:20px; }
+  .price { font-size:22px; font-weight:800; }
+  .price small { font-size:12px; color:#8fa1cc; font-weight:400; }
+  .buy { display:inline-block; padding:11px 26px; border-radius:999px; background:linear-gradient(90deg,#2f6bff,#26e6b0); color:#fff; font-weight:700; font-size:14px; }
+  .buy.ghost { background:#232636; }
+  .novels { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
+  .ncard { background:#171a26; border-radius:22px; overflow:hidden; display:block; }
+  .ncard img { width:100%; height:190px; object-fit:cover; display:block; }
+  .ncard .in { padding:20px 22px 24px; }
+  .ncard h3 { font-size:17px; line-height:1.55; margin-bottom:8px; }
+  .ncard p { color:#aebadd; font-size:13px; line-height:1.8; }
+  .tag { display:inline-block; font-size:11px; padding:4px 12px; border-radius:999px; background:#232636; color:#9fd8ff; margin-bottom:12px; }
+  .band { margin-top:64px; border-radius:26px; background:linear-gradient(90deg,#2f6bff,#7a4dff); padding:38px 44px; display:flex; align-items:center; justify-content:space-between; }
+  .band h3 { font-size:24px; }
+  .band p { color:#dbe4ff; font-size:14px; margin-top:8px; }
+  .band .yt { background:#fff; color:#10275e; padding:13px 30px; border-radius:999px; font-weight:800; font-size:15px; }
+  footer { margin:70px 0 40px; color:#5f6f99; font-size:12px; display:flex; justify-content:space-between; }
+  @media (max-width: 700px) {
+    .wrap { padding:0 16px; }
+    nav { display:none; }
+    .logo { font-size:15px; }
+    .hero img { height:330px; }
+    .hero .txt { left:22px; right:22px; }
+    .hero h1 { font-size:33px; }
+    .hero p { font-size:13px; }
+    h2 { font-size:22px; margin-top:48px; }
+    .grid { grid-template-columns:1fr; }
+    .card.feature { grid-column:span 1; flex-direction:column; align-items:stretch; }
+    .thumb { height:130px; font-size:24px; }
+    .novels { grid-template-columns:1fr; }
+    .band { flex-direction:column; align-items:flex-start; gap:18px; padding:28px 24px; }
+    footer { flex-direction:column; gap:8px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="logo">DREM PLAY <span>― 夢芝居 × StoryVerse</span></div>
+    <nav>
+      <a href="tools.html">ツール</a>
+      <a href="works.html">小説</a>
+      <a href="https://www.youtube.com/@Dreamplay-u1c" target="_blank" rel="noopener">動画</a>
+      <a href="https://yumeshibai.shopselect.net/" target="_blank" rel="noopener">ショップ</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <img src="hero.jpg" alt="">
+    <div class="shade"></div>
+    <div class="txt">
+      <h1>物語を、作る。</h1>
+      <p>小説と動画の「夢芝居」と、制作ツール「StoryVerse」の公式ストア。<br>作る人のための道具と、物語そのものを、ここから。</p>
+      <a class="cta" href="#tools">商品を見る</a>
+    </div>
+  </div>
+
+  <h2 id="tools">制作ツール</h2>
+  <div class="sub">購入とダウンロードは BASE（DREM PLAY SHOP）で安全にお手続きいただけます</div>
+  <div class="grid">
+    <div class="card feature">
+      <div style="flex:1.2">
+        <div class="tag">いちおし</div>
+        <h3>Your AI ― あなたのPCの中で動く、AI相方アプリ</h3>
+        <p>クラウドではなく、あなたのPCの中で頭脳が動くAIパートナー。専門チームと会話でき、使うほどあなたの前提を覚えていきます。月額なし・買い切り。かんたんセットアップ付き、202言語対応。</p>
+        <div class="row"><div class="price">¥4,980 <small>買い切り</small></div><a class="buy" href="https://yumeshibai.shopselect.net/items/165148499" target="_blank" rel="noopener">BASEで購入</a></div>
+      </div>
+      <div class="thumb t-yourai" style="flex:1">Your AI</div>
+    </div>
+    <div class="card">
+      <div class="thumb t-wv">Word Video</div>
+      <h3>Word Video（縦書き動画エディタ）</h3>
+      <p>縦書きの数字は縦中横で、英語は縦に流れる。縦書き映像のための動画エディタ。</p>
+      <div class="row"><div class="price">¥1,980</div><a class="buy" href="https://yumeshibai.shopselect.net/items/165057743" target="_blank" rel="noopener">BASEで購入</a></div>
+    </div>
+    <div class="card">
+      <div class="thumb t-word">Word</div>
+      <h3>Word（縦書きエディタ）</h3>
+      <p>数字の扱いと、縦に流れる英語。小説を書くための縦書きエディタ。</p>
+      <div class="row"><div class="price">¥1,480</div><a class="buy" href="https://yumeshibai.shopselect.net/items/165045648" target="_blank" rel="noopener">BASEで購入</a></div>
+    </div>
+    <div class="card">
+      <div class="thumb t-ui">UIペイント</div>
+      <h3>UIペイント</h3>
+      <p>202言語・画像21形式対応のペイントツール。画面部品づくりに。</p>
+      <div class="row"><div class="price">¥980</div><a class="buy" href="https://yumeshibai.shopselect.net/items/165017723" target="_blank" rel="noopener">BASEで購入</a></div>
+    </div>
+    <div class="card">
+      <div class="thumb t-tr">翻訳</div>
+      <h3>StoryVerse翻訳</h3>
+      <p>訳せる文字数に上限なし。202言語対応、オフラインで動く翻訳ツール。</p>
+      <div class="row"><div class="price">¥1,980</div><span class="buy ghost">近日公開</span></div>
+    </div>
+  </div>
+
+  <h2>小説</h2>
+  <div class="sub">カクヨムで連載中 ／ Kindleでも販売中</div>
+  <div class="novels">
+    <a class="ncard" href="https://kakuyomu.jp/works/11054822666379061486" target="_blank" rel="noopener">
+      <img src="nidome.png" alt="">
+      <div class="in"><div class="tag">カクヨム連載中</div>
+      <h3>二度目の人生は、捨てた剣から</h3>
+      <p>――その神は、人を救わない。前世で剣も人との繋がりも捨てた男の、二度目の人生。</p></div>
+    </a>
+    <a class="ncard" href="https://kakuyomu.jp/works/11054822666410714960" target="_blank" rel="noopener">
+      <img src="tenmeibo.png" alt="">
+      <div class="in"><div class="tag">カクヨム連載中</div>
+      <h3>天名簿の名消え</h3>
+      <p>自分の名前が、明日の名簿から消えていた。異世界×ミステリー。</p></div>
+    </a>
+    <a class="ncard" href="https://www.amazon.co.jp/stores/%E5%A4%A2%E8%8A%9D%E5%B1%85/author/B0HJMFFGB5" target="_blank" rel="noopener">
+      <img src="tsuki.png" alt="">
+      <div class="in"><div class="tag">Kindle ¥300</div>
+      <h3>月の聖域と異世界の旅人 1巻</h3>
+      <p>夢芝居の代表作。YouTubeで映像シリーズも公開中。</p></div>
+    </a>
+  </div>
+
+  <div class="band">
+    <div>
+      <h3>YouTube「yumeshibai（夢芝居）」</h3>
+      <p>自作小説の映像化シリーズを、週に数回公開しています</p>
+    </div>
+    <a class="yt" href="https://www.youtube.com/@Dreamplay-u1c" target="_blank" rel="noopener">チャンネルを見る</a>
+  </div>
+
+  <footer>
+    <div>DREM PLAY ― 夢芝居 × StoryVerse</div>
+    <div>購入・ダウンロードは BASE（DREM PLAY SHOP）へ</div>
+  </footer>
+</div>
+</body>
+</html>
