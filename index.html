@@ -105,15 +105,23 @@
       var gy=gate ? (gate.getBoundingClientRect().top + y) : 600;
       if(y + window.innerHeight*0.5 >= gy){ passed=true; }
     }
-    window.addEventListener('scroll', checkPass, {passive:true});
-    checkPass();
-    document.addEventListener('pointerdown', function(e){
-      if(e.target===b) return;
+    function trySound(){
       if(!passed || soundOn || manual) return;
       a.muted=false; soundOn=true;
       if(a.paused){ var q=a.play(); if(q&&q.catch){ q.catch(function(){}); } }
       setBtn();
+      setTimeout(function(){
+        if(soundOn && a.paused && !manual){ soundOn=false; a.muted=true; setBtn(); }
+      }, 400);
+    }
+    window.addEventListener('scroll', function(){ checkPass(); trySound(); }, {passive:true});
+    checkPass();
+    document.addEventListener('pointerdown', function(e){
+      if(e.target===b) return;
+      trySound();
     });
+    document.addEventListener('touchend', function(){ trySound(); }, {passive:true});
+    document.addEventListener('keydown', function(){ trySound(); });
     b.addEventListener('click', function(){
       manual=true;
       if(soundOn){ a.pause(); soundOn=false; }
