@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ゲーム | DREM PLAY ― 夢芝居</title>
+<meta name="description" content="DREM PLAY（夢芝居）のブラウザゲーム一覧。ブラウザで遊べるHTMLゲームを BOOTH「dramplay official shop」で販売中。全ゲームに無料体験版あり（セーブは製品版へ引き継ぎできます）。">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="assets/storyverse-logo.png">
+<style>
+  .sub { color:#8fa1cc; font-size:14px; margin-bottom:26px; }
+  .games { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
+  .gfeat { display:flex; flex-direction:column; gap:22px; margin-bottom:22px; }
+  .gcard { background:#171a26; border-radius:22px; overflow:hidden; display:flex; flex-direction:column; }
+  .gcard img { width:100%; height:150px; object-fit:cover; display:block; }
+  .gcard .in { padding:18px 20px 22px; display:flex; flex-direction:column; flex:1; }
+  .gcard h3 { font-size:16px; line-height:1.5; margin-bottom:6px; }
+  .gcard p { color:#aebadd; font-size:13px; line-height:1.8; flex:1; }
+  .gcard .price { font-size:19px; font-weight:800; }
+  .gcard .tag { align-self:flex-start; }
+  .gcard.feat { flex-direction:row; }
+  .gcard.feat img { width:44%; height:auto; min-height:240px; }
+  .gcard.feat .in { padding:26px 30px; }
+  .gcard.feat h3 { font-size:23px; }
+  .gcard.feat p { font-size:14px; }
+  .gcard.feat .price { font-size:26px; }
+  .tag { display:inline-block; font-size:11px; padding:4px 12px; border-radius:999px; background:#232636; color:#9fd8ff; margin-bottom:12px; }
+  .row { display:flex; align-items:center; justify-content:space-between; margin-top:20px; }
+  .spec { color:#8fa1cc; font-size:13px; margin-top:12px; }
+  .price { font-size:22px; font-weight:800; }
+  .buy { display:inline-block; padding:11px 26px; border-radius:999px; background:linear-gradient(90deg,#2f6bff,#26e6b0); color:#fff; font-weight:700; font-size:14px; }
+  .buy.ghost { background:#232636; }
+  .back { text-align:center; margin:34px 0 4px; }
+  .back a { color:#9fd8ff; font-size:14px; }
+  @media (max-width: 1000px) { .games { grid-template-columns:repeat(2,1fr); } }
+  @media (max-width: 700px) {
+    .games { grid-template-columns:1fr; }
+    .gcard.feat { flex-direction:column; }
+    .gcard.feat img { width:100%; height:170px; min-height:0; }
+    .gcard.feat .in { padding:20px 22px; }
+    .gcard.feat h3 { font-size:19px; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap header-in">
+    <img class="logo" src="assets/storyverse-logo.png" alt="StoryVerse ロゴ">
+    <div>
+      <div class="brand-name">DREM PLAY</div>
+      <div class="brand-sub">夢芝居 × StoryVerse</div>
+    </div>
+    <nav>
+      <a href="index.html">トップ</a>
+      <a href="novels.html">小説</a>
+      <a href="tools.html">ツール</a>
+      <a href="https://www.youtube.com/@Dreamplay-u1c" target="_blank" rel="noopener">YouTube</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <h2 class="page-title serif">ゲーム</h2>
+  <p class="page-lead">ブラウザで遊べるHTMLゲームを BOOTH「<a href="https://dramplay.booth.pm/" target="_blank" rel="noopener" style="color:#b07dff">dramplay official shop</a>」で販売中 ／ 全ゲームに無料体験版あり（セーブは製品版へ引き継ぎできます）</p>
+
+  <!-- ゲーム一覧：新作は発売順ではなく、特集（gfeat）→通常グリッド（games）の順にカードを追加してください -->
+<div class="gfeat">
+    <div class="gcard feat">
+      <img src="assets/games/game_toh.jpg" alt="塔への剣 〜名もなき冒険者の長編記〜">
+      <div class="in">
+        <div class="tag">長編RPG</div>
+        <h3>塔への剣 〜名もなき冒険者の長編記〜</h3>
+        <p>川辺で拾った剣を手に、世界の果ての塔を目指す長編RPG。15のマップと5体のボス、想定プレイ時間2〜4時間の本格派です。</p>
+        <div class="spec">ブラウザで動作（PC・スマホ対応）／ 無料体験版あり</div>
+        <div class="row"><div class="price">¥980</div><div><a class="buy ghost" href="https://dramplay.booth.pm/items/9202407" target="_blank" rel="noopener">無料体験版</a> <a class="buy" href="https://dramplay.booth.pm/items/9202366" target="_blank" rel="noopener">BOOTHで購入</a></div></div>
+      </div>
+    </div>
+    <div class="gcard feat">
+      <img src="assets/games/game_tenmeibo.jpg" alt="天名簿の名消え 第1話 ノベルゲーム">
+      <div class="in">
+        <div class="tag">ノベルゲーム</div>
+        <h3>天名簿の名消え 第1話</h3>
+        <p>小説『天名簿の名消え』第1話をそのままゲーム化したノベルゲーム。シリーズの主題歌とエンディング曲も流れます。</p>
+        <div class="spec">ブラウザで動作（PC・スマホ対応）／ 無料体験版あり</div>
+        <div class="row"><div class="price">¥550</div><div><a class="buy ghost" href="https://dramplay.booth.pm/items/9202404" target="_blank" rel="noopener">無料体験版</a> <a class="buy" href="https://dramplay.booth.pm/items/9202370" target="_blank" rel="noopener">BOOTHで購入</a></div></div>
+      </div>
+    </div>
+    <div class="gcard feat">
+      <img src="assets/games/game_tsuki.jpg" alt="月の聖域と異世界の旅人 第1話 ノベルゲーム">
+      <div class="in">
+        <div class="tag">ノベルゲーム</div>
+        <h3>月の聖域と異世界の旅人 第1話</h3>
+        <p>小説『月の聖域と異世界の旅人』第1話のノベルゲーム。ユーリとルーナの出会いを、主題歌・ED曲とともにどうぞ。</p>
+        <div class="spec">ブラウザで動作（PC・スマホ対応）／ 無料体験版あり</div>
+        <div class="row"><div class="price">¥550</div><div><a class="buy ghost" href="https://dramplay.booth.pm/items/9202411" target="_blank" rel="noopener">無料体験版</a> <a class="buy" href="https://dramplay.booth.pm/items/9202368" target="_blank" rel="noopener">BOOTHで購入</a></div></div>
+      </div>
+    </div>
+  </div>
+  <div class="games">
+    <div class="gcard">
+      <img src="assets/games/game_guild.jpg" alt="ギルド経営">
+      <div class="in">
+        <div class="tag">経営・放置</div>
+        <h3>ギルド経営</h3>
+        <p>冒険者を集めて全30階のダンジョンへ派遣する、異世界ギルド経営の放置ゲーム。派遣中は放置収入が止まる選択が悩ましい一作です。</p>
+        <div class="spec">ブラウザで動作（PC・スマホ対応）／ 無料体験版あり</div>
+        <div class="row"><div class="price">¥550</div><a class="buy" href="https://dramplay.booth.pm/items/9202020" target="_blank" rel="noopener">BOOTHで購入</a></div>
+      </div>
+    </div>
+    <div class="gcard">
+      <img src="assets/games/game_neko.jpg" alt="ねこカフェ経営">
+      <div class="in">
+        <div class="tag">経営・放置</div>
+        <h3>ねこカフェ経営</h3>
+        <p>猫スタッフと営むカフェ経営の放置ゲーム。おさんぽ派遣と、猫たちの日記が楽しめます。</p>
+        <div class="spec">ブラウザで動作（PC・スマホ対応）／ 無料体験版あり</div>
+        <div class="row"><div class="price">¥550</div><a class="buy" href="https://dramplay.booth.pm/items/9202123" target="_blank" rel="noopener">BOOTHで購入</a></div>
+      </div>
+    </div>
+    <div class="gcard">
+      <img src="assets/games/game_atelier.jpg" alt="錬金アトリエ経営">
+      <div class="in">
+        <div class="tag">経営・放置</div>
+        <h3>錬金アトリエ経営</h3>
+        <p>素材を集めて調合する、錬金アトリエ経営の放置ゲーム。素材採取の旅と採取日記つき。</p>
+        <div class="spec">ブラウザで動作（PC・スマホ対応）／ 無料体験版あり</div>
+        <div class="row"><div class="price">¥550</div><a class="buy" href="https://dramplay.booth.pm/items/9202149" target="_blank" rel="noopener">BOOTHで購入</a></div>
+      </div>
+    </div>
+    <div class="gcard">
+      <img src="assets/games/game_ranch.jpg" alt="モンスター牧場経営">
+      <div class="in">
+        <div class="tag">経営・放置</div>
+        <h3>モンスター牧場経営</h3>
+        <p>モンスターを育ててバトル遠征に出す牧場経営の放置ゲーム。最終ボスは魔王ミリオン。</p>
+        <div class="spec">ブラウザで動作（PC・スマホ対応）／ 無料体験版あり</div>
+        <div class="row"><div class="price">¥550</div><a class="buy" href="https://dramplay.booth.pm/items/9202156" target="_blank" rel="noopener">BOOTHで購入</a></div>
+      </div>
+    </div>
+    <div class="gcard">
+      <img src="assets/games/game_bakery.jpg" alt="パン屋さん経営">
+      <div class="in">
+        <div class="tag">経営・放置</div>
+        <h3>パン屋さん経営</h3>
+        <p>パンを焼いて街へ配達する、パン屋さん経営の放置ゲーム。配達日記つき。</p>
+        <div class="spec">ブラウザで動作（PC・スマホ対応）／ 無料体験版あり</div>
+        <div class="row"><div class="price">¥550</div><a class="buy" href="https://dramplay.booth.pm/items/9202185" target="_blank" rel="noopener">BOOTHで購入</a></div>
+      </div>
+    </div>
+    <div class="gcard">
+      <img src="assets/games/game_onsen.jpg" alt="温泉旅館経営">
+      <div class="in">
+        <div class="tag">経営・放置</div>
+        <h3>温泉旅館経営</h3>
+        <p>12種のお湯が自慢の温泉旅館を営む経営放置ゲーム。おもてなし遠征と日記つき。</p>
+        <div class="spec">ブラウザで動作（PC・スマホ対応）／ 無料体験版あり</div>
+        <div class="row"><div class="price">¥550</div><a class="buy" href="https://dramplay.booth.pm/items/9202205" target="_blank" rel="noopener">BOOTHで購入</a></div>
+      </div>
+    </div>
+    <div class="gcard">
+      <img src="assets/games/game_raising.jpg" alt="モンスター育成所 〜進化の樹〜">
+      <div class="in">
+        <div class="tag">育成</div>
+        <h3>モンスター育成所 〜進化の樹〜</h3>
+        <p>エサと訓練でモンスターが火・水・森の3方向へ進化する育成ゲーム。進化図鑑は全60形態、世代交代でどんどん強く育ちます。</p>
+        <div class="spec">ブラウザで動作（PC・スマホ対応）／ 無料体験版あり</div>
+        <div class="row"><div class="price">¥550</div><a class="buy" href="https://dramplay.booth.pm/items/9202291" target="_blank" rel="noopener">BOOTHで購入</a></div>
+      </div>
+    </div>
+    <div class="gcard">
+      <img src="assets/games/game_booth2036.jpg" alt="フードブース2036 〜深夜の品質チェック〜">
+      <div class="in">
+        <div class="tag">シミュレーション</div>
+        <h3>フードブース2036</h3>
+        <p>深夜のフードブース当直シミュレーション。注文をさばきながら、傷んだ品や異物を見抜く品質チェックが勝負の7日間です。</p>
+        <div class="spec">ブラウザで動作（PC・スマホ対応）／ 無料体験版あり</div>
+        <div class="row"><div class="price">¥550</div><a class="buy" href="https://dramplay.booth.pm/items/9202224" target="_blank" rel="noopener">BOOTHで購入</a></div>
+      </div>
+    </div>
+    <div class="gcard">
+      <img src="assets/games/game_sushi.jpg" alt="早押し！何ネタ寿司クイズ">
+      <div class="in">
+        <div class="tag">クイズ</div>
+        <h3>早押し！何ネタ寿司クイズ</h3>
+        <p>ヒントが1つずつ開く早押し寿司クイズ。何のネタか当てて、常連ライバルより先に6点を取った方の勝ちです。</p>
+        <div class="spec">ブラウザで動作（PC・スマホ対応）／ 無料体験版あり</div>
+        <div class="row"><div class="price">¥550</div><a class="buy" href="https://dramplay.booth.pm/items/9202236" target="_blank" rel="noopener">BOOTHで購入</a></div>
+      </div>
+    </div>
+  </div>
+
+  <p class="back"><a href="index.html">← トップへ戻る</a></p>
+</main>
+
+<footer>
+  <div class="wrap">© DREM PLAY（夢芝居）</div>
+</footer>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "e1d8849cf2b24e939e501954a270ba40"}'></script><!-- End Cloudflare Web Analytics -->
+
+<!-- 多言語 自動翻訳 (Google Translate) -->
+<style>
+#lang-box{position:fixed;top:8px;right:8px;z-index:9999;background:rgba(10,12,20,.85);border:1px solid #2f6bff;border-radius:999px;padding:2px 8px;color:#eef1f8;font-size:11px;line-height:1.4}
+#lang-box .lbl{margin-right:4px}
+.goog-te-banner-frame.skiptranslate{display:none!important}
+body{top:0!important}
+.goog-te-gadget{color:#eef1f8!important;font-size:10px!important}
+.goog-te-gadget select{background:#171a26;color:#eef1f8;border:1px solid #33406b;border-radius:8px;padding:1px 2px;font-size:11px;max-width:110px}
+.goog-te-gadget .goog-te-combo{margin:0!important}
+</style>
+<div id="lang-box"><span class="lbl">🌐</span><span id="google_translate_element"></span></div>
+<script>
+(function(){try{
+  var done=sessionStorage.getItem('gt_auto');
+  var lang=(navigator.language||'ja').toLowerCase();
+  if(!done&&lang.indexOf('ja')!==0){
+    var map={'en':'en','ko':'ko','zh-cn':'zh-CN','zh':'zh-CN','zh-tw':'zh-TW','zh-hk':'zh-TW','es':'es','fr':'fr','de':'de','pt':'pt','ru':'ru','ar':'ar','hi':'hi','id':'id','th':'th','vi':'vi','it':'it','nl':'nl','pl':'pl','tr':'tr','uk':'uk'};
+    var target=map[lang]||map[lang.split('-')[0]]||'en';
+    var exp=new Date(Date.now()+365*24*3600*1000).toUTCString();
+    document.cookie='googtrans=/ja/'+target+'; expires='+exp+'; path=/';
+    document.cookie='googtrans=/ja/'+target+'; expires='+exp+'; path=/; domain='+location.hostname;
+    sessionStorage.setItem('gt_auto','1');
+  }
+}catch(e){}})();
+function googleTranslateElementInit(){
+  new google.translate.TranslateElement({pageLanguage:'ja',autoDisplay:false},'google_translate_element');
+}
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<!-- End 多言語 -->
+
+</body>
+</html>
