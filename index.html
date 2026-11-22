@@ -47,6 +47,15 @@
   .buy { display:inline-block; padding:11px 26px; border-radius:999px; background:linear-gradient(90deg,#2f6bff,#26e6b0); color:#fff; font-weight:700; font-size:14px; }
   .buy.ghost { background:#232636; }
   .novels { display:grid; grid-template-columns:repeat(2,1fr); gap:22px; }
+  .games { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
+  .gcard { background:#171a26; border-radius:22px; overflow:hidden; display:flex; flex-direction:column; }
+  .gcard img { width:100%; height:150px; object-fit:cover; display:block; }
+  .gcard .in { padding:18px 20px 22px; display:flex; flex-direction:column; flex:1; }
+  .gcard h3 { font-size:16px; line-height:1.5; margin-bottom:6px; }
+  .gcard p { color:#aebadd; font-size:13px; line-height:1.8; flex:1; }
+  .gcard .price { font-size:19px; }
+  .gcard .tag { align-self:flex-start; }
+  @media (max-width: 1000px) { .games { grid-template-columns:repeat(2,1fr); } }
   .ncard { background:#171a26; border-radius:22px; overflow:hidden; display:block; }
   .ncard img { width:100%; height:190px; object-fit:cover; display:block; }
 .ncard .movie-wrap { margin:0; border-radius:0; }
@@ -72,6 +81,7 @@
     .card.feature { grid-column:span 1; flex-direction:column; align-items:stretch; }
     .thumb { height:130px; font-size:24px; }
     .novels { grid-template-columns:1fr; }
+    .games { grid-template-columns:1fr; }
     .band { flex-direction:column; align-items:flex-start; gap:18px; padding:28px 24px; }
     footer { flex-direction:column; gap:8px; }
   }
@@ -83,6 +93,7 @@
     <div class="logo">DREM PLAY <span>― 夢芝居 × StoryVerse</span></div>
     <nav>
       <a href="tools.html">ツール</a>
+      <a href="#games">ゲーム</a>
       <a href="novels.html">小説</a>
       <a href="https://www.youtube.com/@Dreamplay-u1c" target="_blank" rel="noopener">動画</a>
       <a href="https://dreamplay.stores.jp/" target="_blank" rel="noopener">ショップ</a>
@@ -200,6 +211,131 @@
       <p>「長すぎて訳せない」がない翻訳ツール。全202言語・オフラインで、1話分を一度に翻訳できます。用語集で人名や用語を固定でき、書いた文章が外に送られることはありません。まずは無料体験版で試せます（日本語・英語・中国語・韓国語・スペイン語のみ／1回1,000文字まで）。翻訳は大意をつかむための下訳です。</p>
       <div class="spec"><svg width="15" height="15" viewBox="0 0 24 24" style="vertical-align:-2px;margin-right:6px" xmlns="http://www.w3.org/2000/svg"><path fill="#00adef" d="M11 3 3 4.2v7.3h8zM13 2.8v8.7h8V4.4zM11 12.7H3v7.2l8 1.1zM13 12.7v8.5l8 1V12.7z"/></svg>対応機種： Windows 10 / 11</div>
       <div class="row"><div class="price">¥1,980</div><a class="buy" href="https://dreamplay.stores.jp/items/6af635a917ed2393e3d76fad" target="_blank" rel="noopener">STORESで購入</a><a class="buy ghost" href="https://www.dropbox.com/scl/fi/1ek5bjf90gawhzkbsm9pn/StoryVerse-_-1.zip?rlkey=80pdbpqkgx40da3rx3fnzolne&amp;dl=1">無料体験版</a></div>
+    </div>
+  </div>
+
+  <h2 id="games">ゲーム</h2>
+  <div class="sub">ブラウザで遊べるHTMLゲームを BOOTH「<a href="https://dramplay.booth.pm/" target="_blank" rel="noopener" style="color:#b07dff">dramplay official shop</a>」で販売中 ／ 全ゲームに無料体験版あり（セーブは製品版へ引き継ぎできます）</div>
+  <div class="games">
+    <div class="gcard">
+      <img src="assets/games/game_toh.jpg" alt="塔への剣 〜名もなき冒険者の長編記〜">
+      <div class="in">
+        <div class="tag">長編RPG</div>
+        <h3>塔への剣 〜名もなき冒険者の長編記〜</h3>
+        <p>川辺で拾った剣を手に、世界の果ての塔を目指す長編RPG。15のマップと5体のボス、想定プレイ時間2〜4時間の本格派です。</p>
+        <div class="spec">ブラウザで動作（PC・スマホ対応）／ 無料体験版あり</div>
+        <div class="row"><div class="price">¥980</div><div><a class="buy ghost" href="https://dramplay.booth.pm/items/9202407" target="_blank" rel="noopener">無料体験版</a> <a class="buy" href="https://dramplay.booth.pm/items/9202366" target="_blank" rel="noopener">BOOTHで購入</a></div></div>
+      </div>
+    </div>
+    <div class="gcard">
+      <img src="assets/games/game_tenmeibo.jpg" alt="天名簿の名消え 第1話 ノベルゲーム">
+      <div class="in">
+        <div class="tag">ノベルゲーム</div>
+        <h3>天名簿の名消え 第1話</h3>
+        <p>小説『天名簿の名消え』第1話をそのままゲーム化したノベルゲーム。シリーズの主題歌とエンディング曲も流れます。</p>
+        <div class="spec">ブラウザで動作（PC・スマホ対応）／ 無料体験版あり</div>
+        <div class="row"><div class="price">¥550</div><div><a class="buy ghost" href="https://dramplay.booth.pm/items/9202404" target="_blank" rel="noopener">無料体験版</a> <a class="buy" href="https://dramplay.booth.pm/items/9202370" target="_blank" rel="noopener">BOOTHで購入</a></div></div>
+      </div>
+    </div>
+    <div class="gcard">
+      <img src="assets/games/game_tsuki.jpg" alt="月の聖域と異世界の旅人 第1話 ノベルゲーム">
+      <div class="in">
+        <div class="tag">ノベルゲーム</div>
+        <h3>月の聖域と異世界の旅人 第1話</h3>
+        <p>小説『月の聖域と異世界の旅人』第1話のノベルゲーム。ユーリとルーナの出会いを、主題歌・ED曲とともにどうぞ。</p>
+        <div class="spec">ブラウザで動作（PC・スマホ対応）／ 無料体験版あり</div>
+        <div class="row"><div class="price">¥550</div><div><a class="buy ghost" href="https://dramplay.booth.pm/items/9202411" target="_blank" rel="noopener">無料体験版</a> <a class="buy" href="https://dramplay.booth.pm/items/9202368" target="_blank" rel="noopener">BOOTHで購入</a></div></div>
+      </div>
+    </div>
+    <div class="gcard">
+      <img src="assets/games/game_guild.jpg" alt="ギルド経営">
+      <div class="in">
+        <div class="tag">経営・放置</div>
+        <h3>ギルド経営</h3>
+        <p>冒険者を集めて全30階のダンジョンへ派遣する、異世界ギルド経営の放置ゲーム。派遣中は放置収入が止まる選択が悩ましい一作です。</p>
+        <div class="spec">ブラウザで動作（PC・スマホ対応）／ 無料体験版あり</div>
+        <div class="row"><div class="price">¥550</div><a class="buy" href="https://dramplay.booth.pm/items/9202020" target="_blank" rel="noopener">BOOTHで購入</a></div>
+      </div>
+    </div>
+    <div class="gcard">
+      <img src="assets/games/game_neko.jpg" alt="ねこカフェ経営">
+      <div class="in">
+        <div class="tag">経営・放置</div>
+        <h3>ねこカフェ経営</h3>
+        <p>猫スタッフと営むカフェ経営の放置ゲーム。おさんぽ派遣と、猫たちの日記が楽しめます。</p>
+        <div class="spec">ブラウザで動作（PC・スマホ対応）／ 無料体験版あり</div>
+        <div class="row"><div class="price">¥550</div><a class="buy" href="https://dramplay.booth.pm/items/9202123" target="_blank" rel="noopener">BOOTHで購入</a></div>
+      </div>
+    </div>
+    <div class="gcard">
+      <img src="assets/games/game_atelier.jpg" alt="錬金アトリエ経営">
+      <div class="in">
+        <div class="tag">経営・放置</div>
+        <h3>錬金アトリエ経営</h3>
+        <p>素材を集めて調合する、錬金アトリエ経営の放置ゲーム。素材採取の旅と採取日記つき。</p>
+        <div class="spec">ブラウザで動作（PC・スマホ対応）／ 無料体験版あり</div>
+        <div class="row"><div class="price">¥550</div><a class="buy" href="https://dramplay.booth.pm/items/9202149" target="_blank" rel="noopener">BOOTHで購入</a></div>
+      </div>
+    </div>
+    <div class="gcard">
+      <img src="assets/games/game_ranch.jpg" alt="モンスター牧場経営">
+      <div class="in">
+        <div class="tag">経営・放置</div>
+        <h3>モンスター牧場経営</h3>
+        <p>モンスターを育ててバトル遠征に出す牧場経営の放置ゲーム。最終ボスは魔王ミリオン。</p>
+        <div class="spec">ブラウザで動作（PC・スマホ対応）／ 無料体験版あり</div>
+        <div class="row"><div class="price">¥550</div><a class="buy" href="https://dramplay.booth.pm/items/9202156" target="_blank" rel="noopener">BOOTHで購入</a></div>
+      </div>
+    </div>
+    <div class="gcard">
+      <img src="assets/games/game_bakery.jpg" alt="パン屋さん経営">
+      <div class="in">
+        <div class="tag">経営・放置</div>
+        <h3>パン屋さん経営</h3>
+        <p>パンを焼いて街へ配達する、パン屋さん経営の放置ゲーム。配達日記つき。</p>
+        <div class="spec">ブラウザで動作（PC・スマホ対応）／ 無料体験版あり</div>
+        <div class="row"><div class="price">¥550</div><a class="buy" href="https://dramplay.booth.pm/items/9202185" target="_blank" rel="noopener">BOOTHで購入</a></div>
+      </div>
+    </div>
+    <div class="gcard">
+      <img src="assets/games/game_onsen.jpg" alt="温泉旅館経営">
+      <div class="in">
+        <div class="tag">経営・放置</div>
+        <h3>温泉旅館経営</h3>
+        <p>12種のお湯が自慢の温泉旅館を営む経営放置ゲーム。おもてなし遠征と日記つき。</p>
+        <div class="spec">ブラウザで動作（PC・スマホ対応）／ 無料体験版あり</div>
+        <div class="row"><div class="price">¥550</div><a class="buy" href="https://dramplay.booth.pm/items/9202205" target="_blank" rel="noopener">BOOTHで購入</a></div>
+      </div>
+    </div>
+    <div class="gcard">
+      <img src="assets/games/game_raising.jpg" alt="モンスター育成所 〜進化の樹〜">
+      <div class="in">
+        <div class="tag">育成</div>
+        <h3>モンスター育成所 〜進化の樹〜</h3>
+        <p>エサと訓練でモンスターが火・水・森の3方向へ進化する育成ゲーム。進化図鑑は全60形態、世代交代でどんどん強く育ちます。</p>
+        <div class="spec">ブラウザで動作（PC・スマホ対応）／ 無料体験版あり</div>
+        <div class="row"><div class="price">¥550</div><a class="buy" href="https://dramplay.booth.pm/items/9202291" target="_blank" rel="noopener">BOOTHで購入</a></div>
+      </div>
+    </div>
+    <div class="gcard">
+      <img src="assets/games/game_booth2036.jpg" alt="フードブース2036 〜深夜の品質チェック〜">
+      <div class="in">
+        <div class="tag">シミュレーション</div>
+        <h3>フードブース2036</h3>
+        <p>深夜のフードブース当直シミュレーション。注文をさばきながら、傷んだ品や異物を見抜く品質チェックが勝負の7日間です。</p>
+        <div class="spec">ブラウザで動作（PC・スマホ対応）／ 無料体験版あり</div>
+        <div class="row"><div class="price">¥550</div><a class="buy" href="https://dramplay.booth.pm/items/9202224" target="_blank" rel="noopener">BOOTHで購入</a></div>
+      </div>
+    </div>
+    <div class="gcard">
+      <img src="assets/games/game_sushi.jpg" alt="早押し！何ネタ寿司クイズ">
+      <div class="in">
+        <div class="tag">クイズ</div>
+        <h3>早押し！何ネタ寿司クイズ</h3>
+        <p>ヒントが1つずつ開く早押し寿司クイズ。何のネタか当てて、常連ライバルより先に6点を取った方の勝ちです。</p>
+        <div class="spec">ブラウザで動作（PC・スマホ対応）／ 無料体験版あり</div>
+        <div class="row"><div class="price">¥550</div><a class="buy" href="https://dramplay.booth.pm/items/9202236" target="_blank" rel="noopener">BOOTHで購入</a></div>
+      </div>
     </div>
   </div>
 
