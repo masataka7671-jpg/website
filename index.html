@@ -85,6 +85,26 @@
     .band { flex-direction:column; align-items:flex-start; gap:18px; padding:28px 24px; }
     footer { flex-direction:column; gap:8px; }
   }
+
+  .cta.game { background:linear-gradient(90deg,#2f6bff,#26e6b0); }
+  .cta + .cta { margin-left:12px; }
+  h2.big { font-size:38px; margin-top:42px; }
+  h2.big::after { content:""; display:block; width:72px; height:5px; border-radius:3px; background:linear-gradient(90deg,#2f6bff,#7a4dff); margin-top:14px; }
+  .gfeat { display:flex; flex-direction:column; gap:22px; margin-bottom:22px; }
+  .gcard.feat { flex-direction:row; }
+  .gcard.feat img { width:44%; height:auto; min-height:240px; }
+  .gcard.feat .in { padding:26px 30px; }
+  .gcard.feat h3 { font-size:23px; }
+  .gcard.feat p { font-size:14px; }
+  .gcard.feat .price { font-size:26px; }
+  @media (max-width: 700px) {
+    h2.big { font-size:28px; margin-top:36px; }
+    .hero .cta { padding:12px 22px; font-size:14px; margin-top:16px; }
+    .gcard.feat { flex-direction:column; }
+    .gcard.feat img { width:100%; height:170px; min-height:0; }
+    .gcard.feat .in { padding:20px 22px; }
+    .gcard.feat h3 { font-size:19px; }
+  }
 </style>
 </head>
 <body>
@@ -92,9 +112,9 @@
   <header>
     <div class="logo">DREM PLAY <span>― 夢芝居 × StoryVerse</span></div>
     <nav>
-      <a href="tools.html">ツール</a>
       <a href="#games">ゲーム</a>
       <a href="novels.html">小説</a>
+      <a href="tools.html">ツール</a>
       <a href="https://www.youtube.com/@Dreamplay-u1c" target="_blank" rel="noopener">動画</a>
       <a href="https://dreamplay.stores.jp/" target="_blank" rel="noopener">ショップ</a>
     </nav>
@@ -151,73 +171,17 @@
     <div class="shade"></div>
     <div class="txt">
       <h1>物語を、作る。</h1>
-      <p>小説と動画の「夢芝居」と、制作ツール「StoryVerse」の公式ストア。<br>作る人のための道具と、物語そのものを、ここから。</p>
+      <p>小説と動画の「夢芝居」と、制作ツール「StoryVerse」の公式ストア。<br>ブラウザで遊べるゲームも揃えました。作る人のための道具と、物語そのものを、ここから。</p>
+      <a class="cta game" href="#games">ゲームを見る</a>
       <a class="cta" href="#tools">商品を見る</a>
       <a class="cta line" href="https://store.line.me/stickershop/author/6578666/ja" target="_blank" rel="noopener">LINEスタンプ</a>
     </div>
   </div>
 
-  <h2 id="tools">制作ツール</h2>
-  <div class="sub">購入とダウンロードは STORES（Dream Play 公式SHOP）で安全にお手続きいただけます</div>
-  <div class="grid">
-    <div class="card feature">
-      <div style="flex:1.2">
-        <div class="tag">いちおし</div>
-        <h3>Your AI ― あなたのPCの中で動く、AI相方アプリ</h3>
-        <p>クラウドではなく、あなたのPCの中で頭脳が動くAIパートナー。専門チームと会話でき、使うほどあなたの前提を覚えていきます。月額なし・買い切り。かんたんセットアップ付き、202言語対応。</p>
-        <div class="spec"><svg width="15" height="15" viewBox="0 0 24 24" style="vertical-align:-2px;margin-right:6px" xmlns="http://www.w3.org/2000/svg"><path fill="#00adef" d="M11 3 3 4.2v7.3h8zM13 2.8v8.7h8V4.4zM11 12.7H3v7.2l8 1.1zM13 12.7v8.5l8 1V12.7z"/></svg>対応機種： Windows 10 / 11</div>
-      <div class="row"><div class="price">¥4,980 <small>買い切り</small></div><a class="buy" href="https://dreamplay.stores.jp/items/6af182baed71099a36ebdfe7" target="_blank" rel="noopener">STORESで購入</a></div>
-      </div>
-      <div class="thumb t-yourai" style="flex:1">Your AI</div>
-    </div>
-    <div class="card">
-      <div class="thumb t-chat">StoryVerse Chat</div>
-      <h3>StoryVerse Chat（AIチャット体験版）</h3>
-      <p>Your AI の軽い体験版です。軽いモデルとサーバーを同梱したチャット専用アプリで、ネットにつながなくても使えます。書いた文章が外に送られることはありません（ダウンロード約1.7GB）。二次配布は禁止です。ご使用の前に、同梱の NOTICE_Gemma.txt（使用上の注意）を必ずお読みください。</p>
-      <div class="spec"><svg width="15" height="15" viewBox="0 0 24 24" style="vertical-align:-2px;margin-right:6px" xmlns="http://www.w3.org/2000/svg"><path fill="#00adef" d="M11 3 3 4.2v7.3h8zM13 2.8v8.7h8V4.4zM11 12.7H3v7.2l8 1.1zM13 12.7v8.5l8 1V12.7z"/></svg>対応機種： Windows 10 / 11</div>
-      <div class="row"><div class="price">無料</div><a class="buy ghost" href="https://drive.usercontent.google.com/download?id=1Srp1CPZbFTs5tP9ZsU1786V_GVdtdww-&amp;export=download&amp;confirm=t" target="_blank" rel="noopener">無料ダウンロード</a></div>
-    </div>
-    <div class="card">
-      <div class="thumb t-wv">Word Video</div>
-      <h3>Word Video（縦書き動画エディタ）</h3>
-      <p>縦書きの数字は縦中横で、英語は縦に流れる。縦書き映像のための動画エディタ。まずは無料体験版で試せます（保存・書き出しは2,000文字まで）。</p>
-      <div class="spec"><svg width="15" height="15" viewBox="0 0 24 24" style="vertical-align:-2px;margin-right:6px" xmlns="http://www.w3.org/2000/svg"><path fill="#00adef" d="M11 3 3 4.2v7.3h8zM13 2.8v8.7h8V4.4zM11 12.7H3v7.2l8 1.1zM13 12.7v8.5l8 1V12.7z"/></svg>対応機種： Windows 10 / 11</div>
-      <div class="row"><div class="price">¥1,980</div><a class="buy" href="https://dreamplay.stores.jp/items/6af181de1137b9f7bc2d15ac" target="_blank" rel="noopener">STORESで購入</a><a class="buy ghost" href="https://www.dropbox.com/scl/fi/qdhchp2w5fcl3b4z18bm1/word-video-trial.zip?rlkey=78nwyekfm3yav01xzdy12zefk&dl=1">無料体験版</a></div>
-    </div>
-    <div class="card">
-      <div class="thumb t-word">Word</div>
-      <h3>Word（縦書きエディタ）</h3>
-      <p>縦書きで数字が崩れる、英語が横になってしまう。その悩みを解く縦書きエディタ。数字は縦中横、英語は縦に流れます。まずは無料体験版で試せます（保存・書き出しは2,000文字まで）。</p>
-      <div class="spec"><svg width="15" height="15" viewBox="0 0 24 24" style="vertical-align:-2px;margin-right:6px" xmlns="http://www.w3.org/2000/svg"><path fill="#00adef" d="M11 3 3 4.2v7.3h8zM13 2.8v8.7h8V4.4zM11 12.7H3v7.2l8 1.1zM13 12.7v8.5l8 1V12.7z"/></svg>対応機種： Windows 10 / 11</div>
-      <div class="row"><div class="price">¥1,480</div><a class="buy" href="https://dreamplay.stores.jp/items/6af17f813a5338ec5e280fdc" target="_blank" rel="noopener">STORESで購入</a><a class="buy ghost" href="https://www.dropbox.com/scl/fi/iwctqvvrbao2iv12rsead/word-trial.zip?rlkey=tsooiy00k0uyi3cwq84bdkf6o&dl=1">無料体験版</a></div>
-    </div>
-    <div class="card">
-      <div class="thumb t-ui">UIペイント</div>
-      <h3>UIペイント</h3>
-      <p>アプリ画面の部品づくりに。202言語・画像21形式対応。まずは無料体験版で試せます（書き出しは長辺800pxまで）。</p>
-      <div class="spec"><svg width="15" height="15" viewBox="0 0 24 24" style="vertical-align:-2px;margin-right:6px" xmlns="http://www.w3.org/2000/svg"><path fill="#00adef" d="M11 3 3 4.2v7.3h8zM13 2.8v8.7h8V4.4zM11 12.7H3v7.2l8 1.1zM13 12.7v8.5l8 1V12.7z"/></svg>対応機種： Windows 10 / 11</div>
-      <div class="row"><div class="price">¥2,980</div><a class="buy" href="https://dreamplay.stores.jp/items/6af180fb14084a1c512d16f4" target="_blank" rel="noopener">STORESで購入</a><a class="buy ghost" href="https://www.dropbox.com/scl/fi/54m7a9wzs1cbmmkish40z/ui-paint-trial.zip?rlkey=r36wqins6v74qn8xvtdxyj363&dl=1">無料体験版</a></div>
-    </div>
-    <div class="card">
-      <div class="thumb t-maker">アプリメーカー</div>
-      <h3>UIアプリメーカー</h3>
-      <p>UIペイントで作ったデザインを、実際に動くアプリに変える変換ツール。出力はツール用アプリとHP用（ブラウザで開けるページ）の2系統で、ボタンの「意味」に対応した動作が付きます。お試し用サンプルデザイン同梱。デザインの作成にはUIペイント（別売）が必要です。</p>
-      <div class="spec"><svg width="15" height="15" viewBox="0 0 24 24" style="vertical-align:-2px;margin-right:6px" xmlns="http://www.w3.org/2000/svg"><path fill="#00adef" d="M11 3 3 4.2v7.3h8zM13 2.8v8.7h8V4.4zM11 12.7H3v7.2l8 1.1zM13 12.7v8.5l8 1V12.7z"/></svg>対応機種： Windows 10 / 11</div>
-      <div class="row"><div class="price">¥1,980</div><a class="buy" href="https://dreamplay.stores.jp/items/6af6fa35bda1a0392fdc0c64" target="_blank" rel="noopener">STORESで購入</a></div>
-    </div>
-    <div class="card">
-      <div class="thumb t-tr">翻訳</div>
-      <h3>StoryVerse 翻訳</h3>
-      <p>「長すぎて訳せない」がない翻訳ツール。全202言語・オフラインで、1話分を一度に翻訳できます。用語集で人名や用語を固定でき、書いた文章が外に送られることはありません。まずは無料体験版で試せます（日本語・英語・中国語・韓国語・スペイン語のみ／1回1,000文字まで）。翻訳は大意をつかむための下訳です。</p>
-      <div class="spec"><svg width="15" height="15" viewBox="0 0 24 24" style="vertical-align:-2px;margin-right:6px" xmlns="http://www.w3.org/2000/svg"><path fill="#00adef" d="M11 3 3 4.2v7.3h8zM13 2.8v8.7h8V4.4zM11 12.7H3v7.2l8 1.1zM13 12.7v8.5l8 1V12.7z"/></svg>対応機種： Windows 10 / 11</div>
-      <div class="row"><div class="price">¥1,980</div><a class="buy" href="https://dreamplay.stores.jp/items/6af635a917ed2393e3d76fad" target="_blank" rel="noopener">STORESで購入</a><a class="buy ghost" href="https://www.dropbox.com/scl/fi/1ek5bjf90gawhzkbsm9pn/StoryVerse-_-1.zip?rlkey=80pdbpqkgx40da3rx3fnzolne&amp;dl=1">無料体験版</a></div>
-    </div>
-  </div>
-
-  <h2 id="games">ゲーム</h2>
+  <h2 id="games" class="big">ゲーム</h2>
   <div class="sub">ブラウザで遊べるHTMLゲームを BOOTH「<a href="https://dramplay.booth.pm/" target="_blank" rel="noopener" style="color:#b07dff">dramplay official shop</a>」で販売中 ／ 全ゲームに無料体験版あり（セーブは製品版へ引き継ぎできます）</div>
-  <div class="games">
-    <div class="gcard">
+  <div class="gfeat">
+    <div class="gcard feat">
       <img src="assets/games/game_toh.jpg" alt="塔への剣 〜名もなき冒険者の長編記〜">
       <div class="in">
         <div class="tag">長編RPG</div>
@@ -227,7 +191,7 @@
         <div class="row"><div class="price">¥980</div><div><a class="buy ghost" href="https://dramplay.booth.pm/items/9202407" target="_blank" rel="noopener">無料体験版</a> <a class="buy" href="https://dramplay.booth.pm/items/9202366" target="_blank" rel="noopener">BOOTHで購入</a></div></div>
       </div>
     </div>
-    <div class="gcard">
+    <div class="gcard feat">
       <img src="assets/games/game_tenmeibo.jpg" alt="天名簿の名消え 第1話 ノベルゲーム">
       <div class="in">
         <div class="tag">ノベルゲーム</div>
@@ -237,7 +201,7 @@
         <div class="row"><div class="price">¥550</div><div><a class="buy ghost" href="https://dramplay.booth.pm/items/9202404" target="_blank" rel="noopener">無料体験版</a> <a class="buy" href="https://dramplay.booth.pm/items/9202370" target="_blank" rel="noopener">BOOTHで購入</a></div></div>
       </div>
     </div>
-    <div class="gcard">
+    <div class="gcard feat">
       <img src="assets/games/game_tsuki.jpg" alt="月の聖域と異世界の旅人 第1話 ノベルゲーム">
       <div class="in">
         <div class="tag">ノベルゲーム</div>
@@ -247,6 +211,8 @@
         <div class="row"><div class="price">¥550</div><div><a class="buy ghost" href="https://dramplay.booth.pm/items/9202411" target="_blank" rel="noopener">無料体験版</a> <a class="buy" href="https://dramplay.booth.pm/items/9202368" target="_blank" rel="noopener">BOOTHで購入</a></div></div>
       </div>
     </div>
+  </div>
+  <div class="games">
     <div class="gcard">
       <img src="assets/games/game_guild.jpg" alt="ギルド経営">
       <div class="in">
@@ -766,6 +732,63 @@
   <p class="postercap">『二度目の人生は、捨てた剣から』全キャラクター</p>
   <img class="posterimg" src="poster_tenmeibo.jpg" alt="天名簿の名消え 全キャラクター">
   <p class="postercap">『天名簿の名消え』全キャラクター</p>
+
+  <h2 id="tools">制作ツール</h2>
+  <div class="sub">購入とダウンロードは STORES（Dream Play 公式SHOP）で安全にお手続きいただけます</div>
+  <div class="grid">
+    <div class="card feature">
+      <div style="flex:1.2">
+        <div class="tag">いちおし</div>
+        <h3>Your AI ― あなたのPCの中で動く、AI相方アプリ</h3>
+        <p>クラウドではなく、あなたのPCの中で頭脳が動くAIパートナー。専門チームと会話でき、使うほどあなたの前提を覚えていきます。月額なし・買い切り。かんたんセットアップ付き、202言語対応。</p>
+        <div class="spec"><svg width="15" height="15" viewBox="0 0 24 24" style="vertical-align:-2px;margin-right:6px" xmlns="http://www.w3.org/2000/svg"><path fill="#00adef" d="M11 3 3 4.2v7.3h8zM13 2.8v8.7h8V4.4zM11 12.7H3v7.2l8 1.1zM13 12.7v8.5l8 1V12.7z"/></svg>対応機種： Windows 10 / 11</div>
+      <div class="row"><div class="price">¥4,980 <small>買い切り</small></div><a class="buy" href="https://dreamplay.stores.jp/items/6af182baed71099a36ebdfe7" target="_blank" rel="noopener">STORESで購入</a></div>
+      </div>
+      <div class="thumb t-yourai" style="flex:1">Your AI</div>
+    </div>
+    <div class="card">
+      <div class="thumb t-chat">StoryVerse Chat</div>
+      <h3>StoryVerse Chat（AIチャット体験版）</h3>
+      <p>Your AI の軽い体験版です。軽いモデルとサーバーを同梱したチャット専用アプリで、ネットにつながなくても使えます。書いた文章が外に送られることはありません（ダウンロード約1.7GB）。二次配布は禁止です。ご使用の前に、同梱の NOTICE_Gemma.txt（使用上の注意）を必ずお読みください。</p>
+      <div class="spec"><svg width="15" height="15" viewBox="0 0 24 24" style="vertical-align:-2px;margin-right:6px" xmlns="http://www.w3.org/2000/svg"><path fill="#00adef" d="M11 3 3 4.2v7.3h8zM13 2.8v8.7h8V4.4zM11 12.7H3v7.2l8 1.1zM13 12.7v8.5l8 1V12.7z"/></svg>対応機種： Windows 10 / 11</div>
+      <div class="row"><div class="price">無料</div><a class="buy ghost" href="https://drive.usercontent.google.com/download?id=1Srp1CPZbFTs5tP9ZsU1786V_GVdtdww-&amp;export=download&amp;confirm=t" target="_blank" rel="noopener">無料ダウンロード</a></div>
+    </div>
+    <div class="card">
+      <div class="thumb t-wv">Word Video</div>
+      <h3>Word Video（縦書き動画エディタ）</h3>
+      <p>縦書きの数字は縦中横で、英語は縦に流れる。縦書き映像のための動画エディタ。まずは無料体験版で試せます（保存・書き出しは2,000文字まで）。</p>
+      <div class="spec"><svg width="15" height="15" viewBox="0 0 24 24" style="vertical-align:-2px;margin-right:6px" xmlns="http://www.w3.org/2000/svg"><path fill="#00adef" d="M11 3 3 4.2v7.3h8zM13 2.8v8.7h8V4.4zM11 12.7H3v7.2l8 1.1zM13 12.7v8.5l8 1V12.7z"/></svg>対応機種： Windows 10 / 11</div>
+      <div class="row"><div class="price">¥1,980</div><a class="buy" href="https://dreamplay.stores.jp/items/6af181de1137b9f7bc2d15ac" target="_blank" rel="noopener">STORESで購入</a><a class="buy ghost" href="https://www.dropbox.com/scl/fi/qdhchp2w5fcl3b4z18bm1/word-video-trial.zip?rlkey=78nwyekfm3yav01xzdy12zefk&dl=1">無料体験版</a></div>
+    </div>
+    <div class="card">
+      <div class="thumb t-word">Word</div>
+      <h3>Word（縦書きエディタ）</h3>
+      <p>縦書きで数字が崩れる、英語が横になってしまう。その悩みを解く縦書きエディタ。数字は縦中横、英語は縦に流れます。まずは無料体験版で試せます（保存・書き出しは2,000文字まで）。</p>
+      <div class="spec"><svg width="15" height="15" viewBox="0 0 24 24" style="vertical-align:-2px;margin-right:6px" xmlns="http://www.w3.org/2000/svg"><path fill="#00adef" d="M11 3 3 4.2v7.3h8zM13 2.8v8.7h8V4.4zM11 12.7H3v7.2l8 1.1zM13 12.7v8.5l8 1V12.7z"/></svg>対応機種： Windows 10 / 11</div>
+      <div class="row"><div class="price">¥1,480</div><a class="buy" href="https://dreamplay.stores.jp/items/6af17f813a5338ec5e280fdc" target="_blank" rel="noopener">STORESで購入</a><a class="buy ghost" href="https://www.dropbox.com/scl/fi/iwctqvvrbao2iv12rsead/word-trial.zip?rlkey=tsooiy00k0uyi3cwq84bdkf6o&dl=1">無料体験版</a></div>
+    </div>
+    <div class="card">
+      <div class="thumb t-ui">UIペイント</div>
+      <h3>UIペイント</h3>
+      <p>アプリ画面の部品づくりに。202言語・画像21形式対応。まずは無料体験版で試せます（書き出しは長辺800pxまで）。</p>
+      <div class="spec"><svg width="15" height="15" viewBox="0 0 24 24" style="vertical-align:-2px;margin-right:6px" xmlns="http://www.w3.org/2000/svg"><path fill="#00adef" d="M11 3 3 4.2v7.3h8zM13 2.8v8.7h8V4.4zM11 12.7H3v7.2l8 1.1zM13 12.7v8.5l8 1V12.7z"/></svg>対応機種： Windows 10 / 11</div>
+      <div class="row"><div class="price">¥2,980</div><a class="buy" href="https://dreamplay.stores.jp/items/6af180fb14084a1c512d16f4" target="_blank" rel="noopener">STORESで購入</a><a class="buy ghost" href="https://www.dropbox.com/scl/fi/54m7a9wzs1cbmmkish40z/ui-paint-trial.zip?rlkey=r36wqins6v74qn8xvtdxyj363&dl=1">無料体験版</a></div>
+    </div>
+    <div class="card">
+      <div class="thumb t-maker">アプリメーカー</div>
+      <h3>UIアプリメーカー</h3>
+      <p>UIペイントで作ったデザインを、実際に動くアプリに変える変換ツール。出力はツール用アプリとHP用（ブラウザで開けるページ）の2系統で、ボタンの「意味」に対応した動作が付きます。お試し用サンプルデザイン同梱。デザインの作成にはUIペイント（別売）が必要です。</p>
+      <div class="spec"><svg width="15" height="15" viewBox="0 0 24 24" style="vertical-align:-2px;margin-right:6px" xmlns="http://www.w3.org/2000/svg"><path fill="#00adef" d="M11 3 3 4.2v7.3h8zM13 2.8v8.7h8V4.4zM11 12.7H3v7.2l8 1.1zM13 12.7v8.5l8 1V12.7z"/></svg>対応機種： Windows 10 / 11</div>
+      <div class="row"><div class="price">¥1,980</div><a class="buy" href="https://dreamplay.stores.jp/items/6af6fa35bda1a0392fdc0c64" target="_blank" rel="noopener">STORESで購入</a></div>
+    </div>
+    <div class="card">
+      <div class="thumb t-tr">翻訳</div>
+      <h3>StoryVerse 翻訳</h3>
+      <p>「長すぎて訳せない」がない翻訳ツール。全202言語・オフラインで、1話分を一度に翻訳できます。用語集で人名や用語を固定でき、書いた文章が外に送られることはありません。まずは無料体験版で試せます（日本語・英語・中国語・韓国語・スペイン語のみ／1回1,000文字まで）。翻訳は大意をつかむための下訳です。</p>
+      <div class="spec"><svg width="15" height="15" viewBox="0 0 24 24" style="vertical-align:-2px;margin-right:6px" xmlns="http://www.w3.org/2000/svg"><path fill="#00adef" d="M11 3 3 4.2v7.3h8zM13 2.8v8.7h8V4.4zM11 12.7H3v7.2l8 1.1zM13 12.7v8.5l8 1V12.7z"/></svg>対応機種： Windows 10 / 11</div>
+      <div class="row"><div class="price">¥1,980</div><a class="buy" href="https://dreamplay.stores.jp/items/6af635a917ed2393e3d76fad" target="_blank" rel="noopener">STORESで購入</a><a class="buy ghost" href="https://www.dropbox.com/scl/fi/1ek5bjf90gawhzkbsm9pn/StoryVerse-_-1.zip?rlkey=80pdbpqkgx40da3rx3fnzolne&amp;dl=1">無料体験版</a></div>
+    </div>
+  </div>
 
   <h2>ツール紹介動画</h2>
   <div class="sub">制作ツールの紹介・体験版動画です</div>
