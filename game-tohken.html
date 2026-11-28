@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>塔への剣 特設サイト | DREM PLAY</title>
+<meta name="description" content="全13ステージ・7地方を歩く長編RPG。ボスを倒すごとに剣と鎧が次の段階へ育つ。PR動画・キャラクター紹介・システム紹介。">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:"Hiragino Maru Gothic ProN","Hiragino Sans","Noto Sans JP",sans-serif; background:#0a1020; color:#16233f; overflow-x:hidden; }
+  .topbar { position:fixed; top:0; left:0; right:0; z-index:50; display:flex; align-items:center; justify-content:space-between; padding:10px 18px; background:rgba(10,16,32,.85); backdrop-filter:blur(6px); }
+  .topbar .logo { color:#fff; font-weight:900; letter-spacing:.35em; font-size:13px; }
+  .topbar nav a { color:#fff; text-decoration:none; font-weight:700; font-size:13px; margin-left:8px; padding:8px 14px; border-radius:999px; background:rgba(255,255,255,.16); }
+  .topbar nav a.buy { background:linear-gradient(90deg,#2f6bff,#3ec6ff); }
+  .hero { position:relative; padding:120px 20px 70px; text-align:center; background:radial-gradient(circle at 50% 20%, #26406e 0%, #16294d 55%, #0a1020 100%); color:#fff; overflow:hidden; }
+  .kicker { display:inline-block; transform:rotate(-3deg); background:linear-gradient(90deg,#2f6bff,#3ec6ff); color:#fff; font-weight:900; letter-spacing:.3em; font-size:12px; padding:6px 16px; border-radius:4px; }
+  .hero h1 { font-size:clamp(38px,9vw,84px); font-weight:900; line-height:1.15; margin:22px 0 8px; text-shadow:6px 6px 0 rgba(62,198,255,.35); letter-spacing:.02em; }
+  .hero .catch { font-size:clamp(15px,3.4vw,22px); font-weight:700; opacity:.95; }
+  .hero .shot { margin:34px auto 0; width:min(420px,88vw); transform:rotate(-2deg); border:6px solid #fff; border-radius:18px; box-shadow:0 24px 50px rgba(0,0,0,.45); display:block; }
+  .secttl { text-align:center; padding:58px 20px 6px; color:#fff; }
+  .secttl .kick { color:#7fd4ff; font-weight:900; letter-spacing:.45em; font-size:12px; }
+  .secttl h2 { font-size:clamp(26px,6vw,42px); font-weight:900; margin-top:8px; }
+  .movie { text-align:center; padding:26px 20px 62px; }
+  .movie video { width:min(330px,84vw); border-radius:18px; border:5px solid #fff; box-shadow:0 20px 44px rgba(0,0,0,.5); background:#000; }
+  .movie p { color:#a9c3ee; font-weight:700; margin-top:14px; font-size:14px; }
+  .chars { max-width:1020px; margin:0 auto; padding:30px 20px 64px; display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:20px; }
+  .char { background:#eef3ff; border-radius:18px; padding:22px 18px 18px; text-align:center; box-shadow:0 14px 30px rgba(0,0,0,.3); }
+  .char img { height:190px; width:auto; max-width:100%; object-fit:contain; }
+  .char h3 { font-size:21px; font-weight:900; margin:10px 0 2px; }
+  .char .role { color:#2f6bff; font-weight:900; font-size:12.5px; letter-spacing:.15em; }
+  .char p { font-size:13.5px; line-height:1.8; margin-top:8px; text-align:left; }
+  .band { padding:64px 20px; background:#eef3ff; }
+  .band.alt { background:#12203c; color:#e6eeff; }
+  .band .inner { max-width:1020px; margin:0 auto; display:flex; gap:36px; align-items:center; flex-wrap:wrap; }
+  .band .inner.rev { flex-direction:row-reverse; }
+  .band .txt { flex:1 1 320px; }
+  .band .kick { color:#2f6bff; font-weight:900; letter-spacing:.45em; font-size:12px; }
+  .band.alt .kick { color:#7fd4ff; }
+  .band h2 { font-size:clamp(24px,5vw,38px); font-weight:900; line-height:1.35; margin:10px 0 14px; }
+  .band p { font-size:15.5px; line-height:1.95; }
+  .band img.shot { flex:0 1 520px; width:min(520px,92vw); border-radius:16px; border:5px solid #fff; box-shadow:0 16px 36px rgba(10,20,40,.28); transform:rotate(1.6deg); }
+  .band .inner.rev img.shot { transform:rotate(-1.6deg); }
+  .band video.sysv { flex:0 1 300px; width:min(300px,80vw); border-radius:16px; border:5px solid #fff; box-shadow:0 16px 36px rgba(10,20,40,.28); background:#000; }
+  .buyband { background:radial-gradient(circle at 50% 20%, #26406e 0%, #16294d 55%, #0a1020 100%); color:#fff; text-align:center; padding:70px 20px; }
+  .buyband h2 { font-size:clamp(26px,6vw,44px); font-weight:900; margin-bottom:8px; }
+  .buyband p { opacity:.92; font-weight:700; margin-bottom:26px; }
+  .btns { display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
+  .btns a { text-decoration:none; font-weight:900; font-size:17px; padding:16px 34px; border-radius:999px; }
+  .btns a.free { background:#fff; color:#16233f; }
+  .btns a.buy { background:linear-gradient(90deg,#2f6bff,#3ec6ff); color:#fff; box-shadow:0 10px 0 rgba(0,0,0,.25); }
+  .btns a.site { background:rgba(255,255,255,.16); color:#fff; border:2px solid #fff; }
+  .spec { text-align:center; padding:26px 16px 40px; font-size:12.5px; opacity:.75; line-height:2; color:#e6eeff; }
+  .backlink { display:block; text-align:center; padding:0 0 44px; }
+  .backlink a { color:#7fd4ff; font-weight:900; text-decoration:none; }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="logo">DREM PLAY</div>
+  <nav>
+    <a href="https://website.dreamplayumeshibai09.workers.dev/">公式サイト</a>
+    <a href="games.html">ゲーム一覧</a>
+    <a href="https://dramplay.booth.pm/items/9240003" target="_blank" rel="noopener">無料体験版</a>
+    <a class="buy" href="https://dramplay.booth.pm/items/9202366" target="_blank" rel="noopener">購入する</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <span class="kicker">歩くRPG</span>
+  <h1>塔への剣</h1>
+  <p class="catch">ボスを倒すごとに、剣と鎧が育っていく。全13ステージ・7地方を歩く長編RPG。</p>
+  <img class="shot" src="assets/games/booth_toh.jpg" alt="塔への剣">
+</section>
+
+<div class="secttl"><div class="kick">PR MOVIE</div><h2>PR動画</h2></div>
+<div class="movie">
+  <video src="assets/tohken-pr.mp4" poster="assets/games/cover_tohken.jpg" controls playsinline preload="metadata"></video>
+  <p>実際のプレイ映像で紹介する、塔への剣のPR動画です。</p>
+</div>
+
+<div class="secttl"><div class="kick">CHARACTER</div><h2>キャラクター</h2></div>
+<div class="chars">
+  <div class="char">
+    <img src="assets/games/chara_tohken_hero.png" alt="主人公">
+    <h3>主人公</h3>
+    <div class="role">青年 ／ 一人旅</div>
+    <p>塔を目指して旅する、名もなき青年。武器は全6種が使えて、装備を変えるとフィールドでもバトルでも見た目が変わります。</p>
+  </div>
+  <div class="char">
+    <img src="assets/games/chara_tohken_b1.png" alt="遺跡ゴーレム">
+    <h3>遺跡ゴーレム</h3>
+    <div class="role">ボス ／ ステージ3</div>
+    <p>遺跡を守る最初のボス。倒すと、スキル「ほのおの剣」を覚えます。</p>
+  </div>
+  <div class="char">
+    <img src="assets/games/chara_tohken_b5.png" alt="黒鎧の騎士ヴェルグ">
+    <h3>黒鎧の騎士ヴェルグ</h3>
+    <div class="role">ボス ／ ステージ11</div>
+    <p>塔の前に立ちはだかる黒鎧の騎士。終盤の強敵です。</p>
+  </div>
+  <div class="char">
+    <img src="assets/games/chara_tohken_b7.png" alt="霧の主ミストラル">
+    <h3>霧の主ミストラル</h3>
+    <div class="role">最後のボス ／ ステージ13</div>
+    <p>霧に包まれた塔の主。倒すと真エンディングを迎えます。</p>
+  </div>
+</div>
+
+<div class="secttl"><div class="kick">SYSTEM</div><h2>システム</h2></div>
+<section class="band alt"><div class="inner"><div class="txt"><div class="kick">SYSTEM MOVIE</div><h2>歩いて、出会って、戦う。</h2><p>行きたい場所をタップすると、青年が歩いていきます。モンスターに近づくとカットインが入ってバトル開始。ステージの東にある鳥居をくぐると、次のステージへ進みます。右の動画は、実際のプレイ映像です。</p></div><video class="sysv" src="assets/tohken-system.mp4" poster="assets/games/cover_tohken.jpg" controls playsinline preload="metadata"></video></div></section>
+
+<section class="band"><div class="inner rev"><div class="txt"><div class="kick">GROWTH</div><h2>ボスを倒すごとに、剣と鎧が育つ。</h2><p>ボスを倒すと、剣と鎧が次の段階へ進化し、新しいスキルを覚えます。さびた剣から始まって、木、鉄、鋼、ミスリル、塔守、星屑へ。装備は全270種から、宝箱や敵のドロップでも手に入ります。</p></div><img class="shot" src="assets/games/shot_tohken_battle.jpg" alt="カットインバトル"></div></section>
+
+<section class="band alt"><div class="inner"><div class="txt"><div class="kick">WALK</div><h2>7つの地方を歩く、長い旅。</h2><p>草原、森、砂漠、雪原、火山、天空、そして霧の塔。全13ステージの長い旅の先に、真エンディングが待っています。難易度はEASYからNIGHTMAREまで4段階です。</p></div><img class="shot" src="assets/games/shot_tohken_field.jpg" alt="フィールドを歩く主人公"></div></section>
+
+<section class="buyband">
+  <h2>いますぐ遊べます</h2>
+  <p>ブラウザですぐ遊べるHTMLゲーム。無料体験版はステージ4まで、セーブは製品版へ引き継げます。</p>
+  <div class="btns">
+    <a class="free" href="https://dramplay.booth.pm/items/9240003" target="_blank" rel="noopener">無料体験版（¥0）</a>
+    <a class="buy" href="https://dramplay.booth.pm/items/9202366" target="_blank" rel="noopener">購入する（¥980）</a>
+    <a class="site" href="https://website.dreamplayumeshibai09.workers.dev/games.html">公式サイトで他のゲームも見る</a>
+  </div>
+</section>
+<div class="spec">対応：PC / スマートフォン（ブラウザ）　ジャンル：歩くRPG<br>制作：夢芝居（DREM PLAY）</div>
+<div class="backlink"><a href="games.html">← ゲーム一覧へもどる</a></div>
+</body>
+</html>
