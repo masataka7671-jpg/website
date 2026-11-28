@@ -52,6 +52,15 @@
   .spec { text-align:center; padding:26px 16px 40px; font-size:12.5px; opacity:.75; line-height:2; color:#efe9ff; }
   .backlink { display:block; text-align:center; padding:0 0 44px; }
   .backlink a { color:#3ec6ff; font-weight:900; text-decoration:none; }
+
+  .syswrap { max-width:1020px; margin:0 auto; padding:26px 20px 62px; }
+  .syslead { color:#fff; font-size:15.5px; line-height:1.95; font-weight:700; text-align:center; margin-bottom:26px; }
+  .sysgrid { display:flex; gap:22px; flex-wrap:wrap; justify-content:center; align-items:flex-start; }
+  .sysgrid figure { text-align:center; }
+  .sysgrid video { border-radius:16px; border:5px solid #fff; box-shadow:0 16px 36px rgba(0,0,0,.4); background:#000; }
+  .sysgrid video.phone { width:min(300px,80vw); }
+  .sysgrid video.pc { width:min(560px,92vw); }
+  .sysgrid figcaption { color:#cdbcf5; font-weight:900; margin-top:10px; font-size:14.5px; }
 </style>
 </head>
 <body>
@@ -107,7 +116,7 @@
 </div>
 
 <div class="secttl"><div class="kick">SYSTEM</div><h2>システム</h2></div>
-<section class="band alt"><div class="inner"><div class="txt"><div class="kick">SYSTEM MOVIE</div><h2>歩いて、出会って、戦う。</h2><p>行きたい場所をタップすると、ルゥルゥが歩いていきます。仲間は、ルゥルゥの歩いた軌跡をたどってついてきます。モンスターに近づくとカットインが入ってバトル開始。ステージの東にある鳥居をくぐると、次のステージへ進みます。右の動画は、実際のプレイ映像です。</p></div><video class="sysv" src="assets/ruru-system.mp4" poster="assets/games/cover_ruru.jpg" controls playsinline preload="metadata"></video></div></section>
+<div class="syswrap"><p class="syslead">行きたい場所をタップすると、ルゥルゥが歩いていきます。仲間は、ルゥルゥの歩いた軌跡をたどってついてきます。モンスターに近づくとカットインが入ってバトル開始。ステージの東にある鳥居をくぐると、次のステージへ進みます。</p><div class="sysgrid"><figure><video class="phone" src="assets/ruru-system.mp4" poster="assets/games/cover_ruru.jpg" controls playsinline preload="metadata"></video><figcaption>📱 スマホで撮った動画</figcaption></figure><figure><video class="pc" src="assets/ruru-pc.mp4" controls playsinline preload="metadata"></video><figcaption>💻 PCで撮った動画</figcaption></figure></div></div>
 
 <section class="band"><div class="inner rev"><div class="txt"><div class="kick">STEAL</div><h2>敵のスキルを「強奪」で奪う。</h2><p>ルゥルゥだけの力「強奪」で、敵のスキルを奪って自分のものにできます。奪えるスキルは全23種。ボスを含む全36種の敵すべてに、奪えるスキルがあります。</p></div><img class="shot" src="assets/games/shot_ruru_battle.jpg" alt="カットインバトル"></div></section>
 
