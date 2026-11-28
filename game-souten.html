@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ルゥルゥの歩く冒険 特設サイト | DREM PLAY</title>
+<meta name="description" content="蒼き空の下で戦うタクティクスSRPG。全20章、コマンドはユニットの上に。高さと射程を読み合う、本格派の戦記。">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:"Hiragino Maru Gothic ProN","Hiragino Sans","Noto Sans JP",sans-serif; background:#241543; color:#2a1a4a; overflow-x:hidden; }
+  .topbar { position:fixed; top:0; left:0; right:0; z-index:50; display:flex; align-items:center; justify-content:space-between; padding:10px 18px; background:rgba(36,21,67,.85); backdrop-filter:blur(6px); }
+  .topbar .logo { color:#fff; font-weight:900; letter-spacing:.35em; font-size:13px; }
+  .topbar nav a { color:#fff; text-decoration:none; font-weight:700; font-size:13px; margin-left:8px; padding:8px 14px; border-radius:999px; background:rgba(255,255,255,.16); }
+  .topbar nav a.buy { background:linear-gradient(90deg,#7b2ff7,#3ec6ff); }
+  .hero { position:relative; padding:120px 20px 70px; text-align:center; background:radial-gradient(circle at 50% 20%, #6d3bd1 0%, #4a2b8f 55%, #241543 100%); color:#fff; overflow:hidden; }
+  .kicker { display:inline-block; transform:rotate(-3deg); background:linear-gradient(90deg,#7b2ff7,#3ec6ff); color:#fff; font-weight:900; letter-spacing:.3em; font-size:12px; padding:6px 16px; border-radius:4px; }
+  .hero h1 { font-size:clamp(38px,9vw,84px); font-weight:900; line-height:1.15; margin:22px 0 8px; text-shadow:6px 6px 0 rgba(62,198,255,.4); letter-spacing:.02em; }
+  .hero .catch { font-size:clamp(15px,3.4vw,22px); font-weight:700; opacity:.95; }
+  .hero .shot { margin:34px auto 0; width:min(420px,88vw); transform:rotate(-2deg); border:6px solid #fff; border-radius:18px; box-shadow:0 24px 50px rgba(0,0,0,.45); display:block; }
+  .secttl { text-align:center; padding:58px 20px 6px; color:#fff; }
+  .secttl .kick { color:#3ec6ff; font-weight:900; letter-spacing:.45em; font-size:12px; }
+  .secttl h2 { font-size:clamp(26px,6vw,42px); font-weight:900; margin-top:8px; }
+  .movie { text-align:center; padding:26px 20px 62px; }
+  .movie video { width:min(330px,84vw); border-radius:18px; border:5px solid #fff; box-shadow:0 20px 44px rgba(0,0,0,.5); background:#000; }
+  .movie p { color:#cdbcf5; font-weight:700; margin-top:14px; font-size:14px; }
+  .chars { max-width:1020px; margin:0 auto; padding:30px 20px 64px; display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:20px; }
+  .char { background:#f6f2ff; border-radius:18px; padding:22px 18px 18px; text-align:center; box-shadow:0 14px 30px rgba(0,0,0,.3); }
+  .char img { height:190px; width:auto; max-width:100%; object-fit:contain; }
+  .char h3 { font-size:21px; font-weight:900; margin:10px 0 2px; }
+  .char .role { color:#7b2ff7; font-weight:900; font-size:12.5px; letter-spacing:.15em; }
+  .char p { font-size:13.5px; line-height:1.8; margin-top:8px; text-align:left; }
+  .band { padding:64px 20px; background:#f6f2ff; }
+  .band.alt { background:#2e1a57; color:#efe9ff; }
+  .band .inner { max-width:1020px; margin:0 auto; display:flex; gap:36px; align-items:center; flex-wrap:wrap; }
+  .band .inner.rev { flex-direction:row-reverse; }
+  .band .txt { flex:1 1 320px; }
+  .band .kick { color:#7b2ff7; font-weight:900; letter-spacing:.45em; font-size:12px; }
+  .band.alt .kick { color:#3ec6ff; }
+  .band h2 { font-size:clamp(24px,5vw,38px); font-weight:900; line-height:1.35; margin:10px 0 14px; }
+  .band p { font-size:15.5px; line-height:1.95; }
+  .band img.shot { flex:0 1 520px; width:min(520px,92vw); border-radius:16px; border:5px solid #fff; box-shadow:0 16px 36px rgba(30,10,40,.28); transform:rotate(1.6deg); }
+  .band .inner.rev img.shot { transform:rotate(-1.6deg); }
+  .band video.sysv { flex:0 1 300px; width:min(300px,80vw); border-radius:16px; border:5px solid #fff; box-shadow:0 16px 36px rgba(30,10,40,.28); background:#000; }
+  .buyband { background:radial-gradient(circle at 50% 20%, #6d3bd1 0%, #4a2b8f 55%, #241543 100%); color:#fff; text-align:center; padding:70px 20px; }
+  .buyband h2 { font-size:clamp(26px,6vw,44px); font-weight:900; margin-bottom:8px; }
+  .buyband p { opacity:.92; font-weight:700; margin-bottom:26px; }
+  .btns { display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
+  .btns a { text-decoration:none; font-weight:900; font-size:17px; padding:16px 34px; border-radius:999px; }
+  .btns a.free { background:#fff; color:#2a1a4a; }
+  .btns a.buy { background:linear-gradient(90deg,#7b2ff7,#3ec6ff); color:#fff; box-shadow:0 10px 0 rgba(0,0,0,.25); }
+  .btns a.site { background:rgba(255,255,255,.16); color:#fff; border:2px solid #fff; }
+  .spec { text-align:center; padding:26px 16px 40px; font-size:12.5px; opacity:.75; line-height:2; color:#efe9ff; }
+  .backlink { display:block; text-align:center; padding:0 0 44px; }
+  .backlink a { color:#3ec6ff; font-weight:900; text-decoration:none; }
+
+  .syswrap { max-width:1020px; margin:0 auto; padding:26px 20px 62px; }
+  .syslead { color:#fff; font-size:15.5px; line-height:1.95; font-weight:700; text-align:center; margin-bottom:26px; }
+  .sysgrid { display:flex; gap:22px; flex-wrap:wrap; justify-content:center; align-items:flex-start; }
+  .sysgrid figure { text-align:center; }
+  .sysgrid video { border-radius:16px; border:5px solid #fff; box-shadow:0 16px 36px rgba(0,0,0,.4); background:#000; }
+  .sysgrid video.phone { width:min(300px,80vw); }
+  .sysgrid video.pc { width:min(560px,92vw); }
+  .sysgrid figcaption { color:#cdbcf5; font-weight:900; margin-top:10px; font-size:14.5px; }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="logo">DREM PLAY</div>
+  <nav>
+    <a href="https://website.dreamplayumeshibai09.workers.dev/">公式サイト</a>
+    <a href="games.html">ゲーム一覧</a>
+    
+    <a class="buy" href="https://dramplay.booth.pm/items/9228597" target="_blank" rel="noopener">購入する</a>
+  </nav>
+</header>
+
+
+<section class="hero">
+  <span class="kicker">タクティクスSRPG</span>
+  <h1>蒼天タクティクス</h1>
+  <p class="catch">蒼き空の戦記。高さと射程を読み合う、全20章のタクティクス。</p>
+  <picture><source media="(orientation: portrait)" srcset="assets/games/hero_souten_tate.jpg"><img class="shot" src="assets/games/hero_souten_yoko.jpg" alt="蒼天タクティクス"></picture>
+</section>
+
+<div class="secttl"><div class="kick">ABOUT</div><h2>ゲームについて</h2></div>
+<section class="band"><div class="inner"><div class="txt"><div class="kick">STORY</div><h2>蒼き空の下の、長い戦記。</h2><p>シナリオは全20章、敵は34種。フリーバトルとオートセーブを備え、遊びごたえは約10〜11時間。ユニットを育て、魔法とスキルを覚えさせ、戦況に合わせて布陣を変える。本格派のタクティクスSRPGです。</p></div><img class="shot" src="assets/games/shot_souten_board.jpg" alt="盤面とユニット情報"></div></section>
+
+<div class="secttl"><div class="kick">SYSTEM</div><h2>システム</h2></div>
+<section class="band"><div class="inner"><div class="txt"><div class="kick">COMMAND</div><h2>コマンドは、ユニットの上に。</h2><p>ユニットを押すと、その上にコマンド（移動・攻撃・魔法・スキル・待機）が出ます。魔法使いと僧侶は「魔法」から直接魔法を選べます。回復や大回復、レベルで覚えるエリアヒールなど、役割ごとの技がそろっています。盤面の端でも、コマンドがはみ出さないように位置が変わります。</p></div><img class="shot" src="assets/games/shot_souten_cmd.jpg" alt="ユニットの上のコマンド"></div></section>
+<section class="band alt"><div class="inner rev"><div class="txt"><div class="kick">HEIGHT &amp; RANGE</div><h2>高さと射程が、勝敗を分ける。</h2><p>マスごとに高さがあり、射程は武器と魔法で変わります。高い所から撃ち下ろし、届かない場所から狙う。ユニット情報にはHP・攻撃・防御・移動・射程と、使える技がいつでも確認できます。</p></div><img class="shot" src="assets/games/hero_souten_yoko.jpg" alt="蒼天タクティクスのタイトル画面"></div></section>
+
+<section class="buyband">
+  <h2>いますぐ遊べます</h2>
+  <p>ブラウザですぐ遊べるHTMLゲーム。全20章の本編です。</p>
+  <div class="btns"><a class="site" href="https://website.dreamplayumeshibai09.workers.dev/games.html"><img src="assets/games/icon_souten.png" alt="" style="width:22px;height:22px;border-radius:50%;vertical-align:-5px;margin-right:3px">公式サイトで他のゲームも見る</a></div>
+  <div class="btns" style="margin-top:14px"><a class="buy" href="https://dramplay.booth.pm/items/9228597" target="_blank" rel="noopener">購入する（¥550）</a></div>
+</section>
+<div class="spec">対応：PC / スマートフォン（ブラウザ）　ジャンル：タクティクスSRPG<br>制作：夢芝居（DREM PLAY）</div>
+<div class="backlink"><a href="games.html">← ゲーム一覧へもどる</a></div>
+</body>
+</html>
